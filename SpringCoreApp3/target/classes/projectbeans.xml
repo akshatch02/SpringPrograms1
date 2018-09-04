@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="address" class="com.cg.project.bean.Address">
+		<constructor-arg name="city" value="pune" />
+		<constructor-arg name="state" value="Maharashtra" />
+		<constructor-arg name="pincode" value="4110232" />
+		<constructor-arg name="country" value="India" />
+		
+		
+	</bean>
+
+	<bean id="employee" class="com.cg.project.bean.Employee">
+		<constructor-arg name="id" value="123" />
+		<constructor-arg name="firstName" value="Akshat" />
+		<constructor-arg name="lastName" value="Chawla" />
+		<constructor-arg name="salary" value="150000" />
+		<constructor-arg name="address" ref="address" />
+	</bean>
+</beans>
